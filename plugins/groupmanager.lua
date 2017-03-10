@@ -6,7 +6,7 @@ local lang = redis:get(hash)
    if not lang then
         return '_You are not bot admin_'
 else
-     return 'شما مدیر ربات نمیباشید'
+     return 'کاربر گرامی شما سازنده نیستی '
     end
 end
     local data = load_data(_config.moderation.data)
@@ -14,7 +14,7 @@ end
 if not lang then
    return '_Group is already added_'
 else
-return 'گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
+return 'گروه به لیست پشتیبانی ربات قدرت مند کینگ98اضافه شد'
   end
 end
         -- create data array in moderation.json
@@ -29,21 +29,21 @@ end
           lock_link = 'yes',
           lock_tag = 'yes',
           lock_spam = 'yes',
-          lock_webpage = 'no',
+          lock_webpage = 'yes',
           lock_markdown = 'no',
           flood = 'yes',
           lock_bots = 'yes',
-          lock_pin = 'no',
-          welcome = 'no',
+          lock_pin = 'yes',
+          welcome = 'yes',
           },
    mutes = {
-                  mute_fwd = 'no',
+                  mute_fwd = 'yes',
                   mute_audio = 'no',
                   mute_video = 'no',
-                  mute_contact = 'no',
+                  mute_contact = 'yes',
                   mute_text = 'no',
                   mute_photos = 'no',
-                  mute_gif = 'no',
+                  mute_gif = 'yes',
                   mute_loc = 'no',
                   mute_doc = 'no',
                   mute_sticker = 'no',
@@ -75,7 +75,7 @@ local lang = redis:get(hash)
      if not lang then
         return '_You are not bot admin_'
    else
-        return 'شما مدیر ربات نمیباشید'
+        return 'کابر گرامی شما سازنده نیستی'
     end
    end
     local data = load_data(_config.moderation.data)
@@ -84,7 +84,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'گروه توسط محمد یا ادمین ها اضافه نشد'
    end
   end
 
@@ -3060,7 +3060,7 @@ end
 if matches[1] == "help" and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*king98 botCommands:*
 
 *!setowner* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
@@ -3190,11 +3190,14 @@ _This Help List Only For_ *Moderators/Owners!*
 _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 
 *Good luck ;)*]]
+کانال رسمی ربات قدرت مند کینگ=@king98_suport
+				گروه پشتیبان ربات=https://telegram.me/joinchat/AAAAAEAXGLAfBFsOt5Hvzw
+				
 
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+*دستورات ربات کینگ98
 
 *!setowner* `[username|id|reply]` 
 _انتخاب مالک گروه(قابل انتخاب چند مالک)_
@@ -3497,4 +3500,3 @@ patterns ={
 run=run,
 pre_process = pre_process
 }
---end groupmanager.lua #beyond team#
