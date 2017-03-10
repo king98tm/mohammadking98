@@ -155,7 +155,7 @@ administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = u
   if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "_User_ "..user_name.." *"..data.id_.."* _added to_ *silent users list*", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *توانایی چت کردن رو از دست داد*", 0, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر_ "..user_name.." *"..data.id_.."* *توانای چت کردن را ندارن *", 0, "md")
    end
 end
 tdcli_function ({
@@ -472,7 +472,7 @@ tdcli.deleteMessagesFromUser(arg.chat_id, data.id_, dl_cb, nil)
   end
 else
     if lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر یافت نشد_", 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "_همچین کاربری در گروه شما وجود ندارد_", 0, "md")
    else
   return tdcli.sendMessage(arg.chat_id, "", 0, "*User Not Found*", 0, "md")
       end
@@ -573,7 +573,7 @@ kick_user(matches[2], msg.to.id)
    if not lang then
  return tdcli.sendMessage(msg.to.id, msg.id, 0, "*User "..matches[2].." has been globally banned*", 0, "md")
     else
- return tdcli.sendMessage(msg.to.id, msg.id, 0, "*کاربر "..matches[2].." از تمام گروه هار ربات محروم شد*", 0, "md")
+ return tdcli.sendMessage(msg.to.id, msg.id, 0, "*کاربر "..matches[2].." از تمام گروه هار ربات محروم شدتعداد گروه:800به بالا*", 0, "md")
       end
    end
   if matches[2] and not string.match(matches[2], '^%d+$') then
