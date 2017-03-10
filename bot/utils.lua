@@ -1,4 +1,4 @@
---Begin Utils.lua By #BeyondTeam :)
+
 function serialize_to_file(data, file, uglify)
   file = io.open(file, 'w+')
   local serialized
@@ -545,7 +545,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'گروه توسط محمد یا ادمین ها اضافه نشد'
    end
   end
   -- determine if table is empty
@@ -553,13 +553,13 @@ else
      if not lang then
 					return "_No_ *banned* _users in this group_"
    else
-					return "*هیچ کاربری از این گروه محروم نشده*"
+					return "*کاربری درگروه مسدود نشد*"
               end
 				end
        if not lang then
    message = '*List of banned users :*\n'
          else
-   message = '_لیست کاربران محروم شده از گروه :_\n'
+   message = '_افرادی که نمیتوانند وارد گروه شوند :_\n'
      end
   for k,v in pairs(data[tostring(chat_id)]['banned']) do
     message = message ..i.. '- '..check_markdown(v)..' [' ..k.. '] \n'
@@ -577,7 +577,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
+    return 'گروه توسط محمد یا ادمین ها اضافه نشد
    end
   end
   -- determine if table is empty
@@ -585,13 +585,13 @@ else
         if not lang then
 					return "_No_ *silent* _users in this group_"
    else
-					return "*لیست کاربران سایلنت شده خالی است*"
+					return "*کاربری در گروه شما سایلنت نشد است
              end
 				end
       if not lang then
    message = '*List of silent users :*\n'
        else
-   message = '_لیست کاربران سایلنت شده :_\n'
+   message = 'کاربرانی که در گروه ساینت شده هستند
     end
   for k,v in pairs(data[tostring(chat_id)]['is_silent_users']) do
     message = message ..i.. '- '..check_markdown(v)..' [' ..k.. '] \n'
