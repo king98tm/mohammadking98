@@ -635,7 +635,7 @@ end
    if not lang then
   return tdcli.sendMessage(msg.to.id, "", 0, "_User "..matches[2].." is already banned_", 0, "md")
   else
-  return tdcli.sendMessage(msg.to.id, "", 0, "*کاربر "..matches[2].." از گروه محروم بود*", 0, "md")
+  return tdcli.sendMessage(msg.to.id, "", 0, "*کاربر "..matches[2].." ازقبل اجازه بازگشت به گروه را نداشت*", 0, "md")
         end
      end
 data[tostring(chat)]['banned'][tostring(matches[2])] = ""
