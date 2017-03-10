@@ -1,7 +1,5 @@
 
---Begin Fun.lua By @BeyondTeam
---Special Thx To @To0fan
---------------------------------
+
 
 local function run_bash(str)
     local cmd = io.popen(str)
@@ -431,4 +429,4 @@ return {
 	run = run,
 	}
 
---#by @BeyondTeam :)
+
