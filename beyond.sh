@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/mohammadking98
+cd $HOME/BDReborn
 
 install() {
 	    cd tg
